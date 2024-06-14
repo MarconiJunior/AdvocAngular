@@ -1,0 +1,46 @@
+<div class="register-container">
+  <form class="register-form" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+    <p>Cadastro de cliente</p>
+    <div class="input-column">
+      <mat-form-field appearance="fill">
+        <mat-label>Nome do Cliente</mat-label>
+        <input matInput formControlName="clientName" name="name" required>
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Email</mat-label>
+        <input matInput formControlName="email" name="email" required>
+      </mat-form-field>
+      <div class="input-row">
+        <mat-form-field appearance="fill" subscriptSizing="dynamic">
+          <mat-label>Data de Nascimento</mat-label>
+          <input matInput formControlName="birthday" [matDatepicker]="picker" required>
+          <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <mat-label>CPF</mat-label>
+          <input matInput formControlName="cpf" name="cpf" required>
+        </mat-form-field>
+      </div>
+      <mat-form-field appearance="fill">
+        <mat-label>Logradouro</mat-label>
+        <input matInput formControlName="road" name="road" required>
+      </mat-form-field>
+      <div class="input-row">
+        <mat-form-field appearance="fill">
+          <mat-label>Bairro</mat-label>
+          <input matInput formControlName="neighborhood" name="neighborhood" required>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <mat-label>Cidade</mat-label>
+          <input matInput formControlName="city" name="city" required>
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="button-group">
+      <button mat-flat-button class="register-button" color="primary" type="submit">Cadastrar</button>
+      <!-- <button mat-flat-button class="register-button" color="accent" type="button"
+        (click)="onRegister()">Register</button> -->
+    </div>
+  </form>
+</div>
