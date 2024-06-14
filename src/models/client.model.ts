@@ -1,4 +1,5 @@
 export class ClientModel {
+  public id?: string;
   public name?: string;
   public email?: string;
   public birthday?: string;

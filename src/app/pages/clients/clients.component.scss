@@ -1,0 +1,42 @@
+.mat-cell {
+  color: #FFF !important;
+  padding: 10px;
+}
+
+.table-header {
+  width: 100%;
+  background-color: #1e1a1d;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.clients-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  flex-grow: 1;
+  height: 100vh;
+}
+
+.mat-elevation-z8 {
+  width: 100%;
+}
+
+.button-group {
+  display: flex;
+  flex-direction: row;
+  margin-right: 10px;
+  gap: 1rem;
+  .delete-button {
+    background-color: #d50000 !important;
+    color: #FFF !important;
+  }
+  .add-button {
+    background-color: #00c853 !important;
+    color: #FFF !important;
+  }
+}

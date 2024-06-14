@@ -2,11 +2,11 @@
   <form class="login-form" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
     <p>Faça o login para começar</p>
     <div>
-      <mat-form-field appearance="fill">
+      <mat-form-field appearance="fill" subscriptSizing="fixed">
         <mat-label>Email</mat-label>
         <input matInput formControlName="email" name="email" required>
       </mat-form-field>
-      <mat-form-field appearance="fill">
+      <mat-form-field appearance="fill" subscriptSizing="fixed">
         <mat-label>Password</mat-label>
         <input matInput formControlName="password" name="password" [type]="hide ? 'password' : 'text'" required>
         <button mat-icon-button matSuffix (click)="hide = !hide" type="button">

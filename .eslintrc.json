@@ -1,0 +1,89 @@
+{
+  "env": {
+    "es6": true,
+    "node": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 2018
+  },
+  "plugins": [
+    "@typescript-eslint"
+  ],
+  "rules": {
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/type-annotation-spacing": "warn",
+    "@typescript-eslint/space-before-function-paren": ["warn", {
+      "anonymous": "never",
+      "named": "never",
+      "asyncArrow": "always"
+    }],
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "@typescript-eslint/explicit-function-return-type": [ "warn", { "allowExpressions": true } ],
+    "@typescript-eslint/ban-types": "off",
+    "@typescript-eslint/indent": [
+      "warn",
+      2,
+      {
+        "ignoredNodes": [
+          "FunctionExpression > .params[decorators.length > 0]",
+          "FunctionExpression > .params > :matches(Decorator, :not(:first-child))",
+          "ClassBody.body > PropertyDefinition[decorators.length > 0] > .key"
+        ],
+        "SwitchCase": 1
+      }
+    ],
+    "quotes": [
+      "warn",
+      "double"
+    ],
+    "semi": [
+      "warn",
+      "always"
+    ],
+    "eol-last": [
+      "warn",
+      "always"
+    ],
+    "space-unary-ops": [
+      1,
+      {
+        "words": true,
+        "nonwords": false
+      }
+    ],
+    "max-len": [
+      "warn",
+      {
+        "code": 110,
+        "ignorePattern": "\\/\\*@i18n\\*\\/|^((import|export)\\s.*\\sfrom)|^((export\\s)?type\\s\\w+\\s?=)|^((\\s+)?@\\w+\\s?\\()"
+      }
+    ],
+    "no-warning-comments": "warn",
+    "space-infix-ops": "warn",
+    "no-duplicate-imports": "warn",
+    "for-direction": "warn",
+    "camelcase": "warn",
+    "no-multiple-empty-lines": "warn",
+    "no-extra-semi": "warn",
+    "no-async-promise-executor": "off",
+    "no-dupe-class-members": "off",
+    "yoda": "warn",
+
+    "comma-dangle": [ "warn", "never" ],
+    "no-trailing-spaces": "warn",
+    "keyword-spacing": "warn",
+    "semi-spacing": "warn",
+    "object-curly-spacing": [ "warn", "always" ],
+    "array-bracket-spacing": [ "warn", "always" ],
+    "space-before-function-paren": "off"
+  }
+}

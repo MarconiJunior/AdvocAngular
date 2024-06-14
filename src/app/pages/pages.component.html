@@ -1,0 +1,10 @@
+<mat-toolbar>
+  <span class="spacer">{{pageTitle}}</span>
+  <div class="example-button-row">
+    <button mat-button [disabled]="isButtonDisabled('/home')" (click)="openHomePage()">Home</button>
+    <button mat-button [disabled]="isButtonDisabled('/clients')" (click)="openClientsPage()">Clientes</button>
+    <button mat-button (click)="openUserPage()">Usuários</button>
+    <button mat-button [disabled]="isButtonDisabled('/users')" (click)="logout()">Sair</button>
+  </div>
+</mat-toolbar>
+<router-outlet></router-outlet>

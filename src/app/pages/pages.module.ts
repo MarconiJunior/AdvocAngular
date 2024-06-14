@@ -1,23 +1,25 @@
 import { NgModule } from "@angular/core";
-import { HomeComponent } from "./home.component";
 import { MatToolbarModule } from "@angular/material/toolbar";
 import { CommonModule } from "@angular/common";
-import { HomeRoutingModule } from "./home-routing.module";
 import { MatIconModule } from "@angular/material/icon";
 import { MatDividerModule } from "@angular/material/divider";
 import { MatButtonModule } from "@angular/material/button";
-import { MatGridListModule } from "@angular/material/grid-list";
+import { PagesComponent } from "./pages.component";
+import { PagesRoutingModule } from "./pages-routing.module";
+import { MatPaginator } from "@angular/material/paginator";
 
 @NgModule({
-  declarations: [ HomeComponent ],
+  declarations: [ PagesComponent ],
   imports: [
     CommonModule,
     MatToolbarModule,
-    HomeRoutingModule,
+    PagesRoutingModule,
     MatIconModule,
     MatDividerModule,
-    MatButtonModule,
-    MatGridListModule
+    MatButtonModule
+  ],
+  providers: [
+    MatPaginator
   ]
 })
-export class HomeModule {}
+export class PagesModule {}
