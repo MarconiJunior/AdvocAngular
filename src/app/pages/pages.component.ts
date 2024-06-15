@@ -59,6 +59,6 @@ export class PagesComponent implements OnInit {
   }
 
   openUserPage(): void {
-
+    this.router.navigate(["/users"]);
   }
 }

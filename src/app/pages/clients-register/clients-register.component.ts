@@ -71,4 +71,7 @@ export class ClientsRegisterComponent {
       });
     }
   }
+  openClientsPage(): void {
+    this.router.navigate([ "/clients" ]);
+  }
 }
