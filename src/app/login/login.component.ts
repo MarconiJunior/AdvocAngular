@@ -66,5 +66,6 @@ export class LoginComponent {
   }
 
   onRegister(): void {
+    this.router.navigate([ "user-register" ]);
   }
 }

@@ -1,0 +1,45 @@
+<div class="register-container">
+  <form class="register-form" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+    <p>Cadastro de usuário</p>
+    <div class="input-column">
+      <mat-form-field appearance="outline" subscriptSizing="fixed">
+        <mat-label>Nome*</mat-label>
+        <input matInput formControlName="name" name="name">
+        <mat-error>{{ getErrorMessage('name') }}</mat-error>
+      </mat-form-field>
+      <mat-form-field appearance="outline" subscriptSizing="fixed">
+        <mat-label>Email*</mat-label>
+        <input matInput formControlName="email" name="email">
+        <mat-error>{{ getErrorMessage('email') }}</mat-error>
+      </mat-form-field>
+      <div class="input-row">
+        <mat-form-field appearance="outline" subscriptSizing="fixed">
+          <mat-label>OAB Serial*</mat-label>
+          <input matInput formControlName="oabSerial" name="oabSerial">
+          <mat-error>{{ getErrorMessage('oabSerial') }}</mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="outline" subscriptSizing="fixed">
+          <mat-label>Telefone*</mat-label>
+          <input matInput formControlName="phone" name="phone" mask="(00) 00000-0000">
+          <mat-error>{{ getErrorMessage('phone') }}</mat-error>
+        </mat-form-field>
+      </div>
+      <div class="input-row">
+        <mat-form-field appearance="outline" subscriptSizing="fixed">
+          <mat-label>Senha*</mat-label>
+          <input matInput formControlName="password" name="password" type="password">
+          <mat-error>{{ getErrorMessage('password') }}</mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="outline" subscriptSizing="fixed">
+          <mat-label>Confirmar Senha*</mat-label>
+          <input matInput formControlName="confirmPassword" name="confirmPassword" type="password">
+          <mat-error>{{ getErrorMessage('confirmPassword') }}</mat-error>
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="button-group">
+      <button mat-flat-button class="register-button" color="primary" type="submit">Cadastrar</button>
+      <button mat-flat-button class="back-button" color="accent" type="button" (click)="openLoginPage()">Voltar</button>
+    </div>
+  </form>
+</div>

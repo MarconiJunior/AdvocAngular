@@ -1,8 +1,8 @@
-import { AbstractControl, ValidatorFn, Validators } from '@angular/forms';
+import { AbstractControl, ValidatorFn, Validators } from "@angular/forms";
 
 export function required(control: AbstractControl): Error | null {
   return Validators.required(control)
-    ? { message: 'The field is required' }
+    ? { message: "The field is required" }
     : null;
 }
 
@@ -35,9 +35,9 @@ export function pattern(
 }
 
 export function confirmedPassword(control: AbstractControl): Error | null {
-  return control.parent?.get('password')?.value === control.value
+  return control.parent?.get("password")?.value === control.value
     ? null
-    : { message: 'Senhas não coincidem' };
+    : { message: "Senhas não coincidem" };
 }
 
 interface Error {

@@ -8,8 +8,12 @@ const routes: Routes = [
     loadChildren: () => import("./login/login.module").then(m => m.LoginModule)
   },
   {
+    path: "user-register",
+    loadChildren: () => import("./register-user/register-user.module").then(m => m.RegisterUserModule)
+  },
+  {
     path: "",
-    canActivate: [ AuthGuard ],
+    canActivateChild: [ AuthGuard ],
     loadChildren: () => import("./pages/pages.module").then(m => m.PagesModule)
   },
   { path: "**", redirectTo: "" }
