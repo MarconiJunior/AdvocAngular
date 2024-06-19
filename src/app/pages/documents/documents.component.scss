@@ -1,12 +1,13 @@
 .documents-container {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-    flex-grow: 1;
-    height: 100vh;
-    color: #FFF !important;
-  }
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  flex-grow: 1;
+  gap: .5rem;
+  height: 100vh;
+  color: #FFF !important;
+}
 
 .row {
   display: flex;
@@ -14,9 +15,13 @@
   justify-content: end;
 }
 
+mat-expansion-panel {
+  margin-bottom: .5rem !important;
+}
+
 .file-name {
-    margin-right: 1rem;
-    text-decoration: none;
+  margin-right: 1rem;
+  text-decoration: none;
 }
 
 .send-btn {
@@ -30,8 +35,8 @@
 
 
 .attach-btn {
-    background-color: #2196f3 !important;
-    color: white !important;
+  background-color: #2196f3 !important;
+  color: white !important;
 }
 
 .attach-btn:hover {
