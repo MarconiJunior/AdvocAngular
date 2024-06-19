@@ -1,0 +1,40 @@
+.documents-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    flex-grow: 1;
+    height: 100vh;
+    color: #FFF !important;
+  }
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+}
+
+.file-name {
+    margin-right: 1rem;
+    text-decoration: none;
+}
+
+.send-btn {
+  background-color: #4caf50 !important;
+  color: white !important;
+}
+
+.send-btn:hover {
+  background-color: #388e3c !important;
+}
+
+
+.attach-btn {
+    background-color: #2196f3 !important;
+    color: white !important;
+}
+
+.attach-btn:hover {
+  background-color: #0e81d1 !important;
+}
+

@@ -58,7 +58,7 @@ export class PagesComponent implements OnInit {
     this.router.navigate([ "/clients" ]);
   }
 
-  openUserPage(): void {
-    this.router.navigate(["/users"]);
+  openDocumentsPage(): void {
+    this.router.navigate(["/documents"]);
   }
 }

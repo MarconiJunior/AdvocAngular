@@ -24,8 +24,8 @@ const routes: Routes = [
         loadChildren: () => import("./clients/clients.module").then(e => e.ClientsRegisterModule)
       },
       {
-        path: "users",
-        loadChildren: () => import("./users/users.module").then(e => e.UsersRegisterModule)
+        path: "documents",
+        loadChildren: () => import("./documents/documents.module").then(e => e.DocumentsRegisterModule)
       },
       { path: "", redirectTo: "home", pathMatch: "full" },
       { path: "**", redirectTo: "home" }

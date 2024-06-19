@@ -1,0 +1,32 @@
+<div class="documents-container">
+@for (client of clientsList; track client) {
+  <mat-expansion-panel (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
+      <mat-expansion-panel-header>
+          <mat-panel-title>{{client.name}}</mat-panel-title>
+      </mat-expansion-panel-header>
+      <div class="row">
+        <span [hidden]="selectedFile == null" class="file-name">{{selectedFile?.name}}</span>
+        <input hidden type="file" (change)="onFileSelected($event)" class="file-input" accept=".pdf" #fileInput>
+        @if (selectedFile == null) {
+        <button mat-fab extended class="attach-btn"
+        (click)="fileInput.click()">
+          <mat-icon>picture_as_pdf</mat-icon>
+          Anexar
+        </button>
+      } @else {
+        <button mat-fab extended color="secondary" class="send-btn"
+        (click)="send(client.id || '')">
+          <mat-icon>send</mat-icon>
+          Enviar
+        </button>
+      }
+      </div>
+      
+      @for (pdf of pdfList; track pdf) {
+        <div class="grid-pdf">
+          <p (click)="downloadFile(pdf.pdfFile, pdf.pdfName)">{{pdf.pdfName}}</p>
+        </div>
+      }
+  </mat-expansion-panel>
+}
+</div>
